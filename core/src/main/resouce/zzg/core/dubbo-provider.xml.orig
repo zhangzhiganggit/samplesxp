@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans.xsd 
+	http://code.alibabatech.com/schema/dubbo http://code.alibabatech.com/schema/dubbo/dubbo.xsd
+	http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-3.0.xsd
+	">
+
+	<util:properties id="conf" location="classpath:config/application.properties" />
+
+	<!-- <dubbo:application name="sms-front-reference" /> -->
+	<dubbo:registry address="#{conf['dubbo.registry.address']}" />
+	<dubbo:protocol name="#{conf['dubbo.provider.protocol']}"  port="#{conf['dubbo.provider.port']}" accepts="100" />
+	
+	<dubbo:service
+		interface="com.suixingpay.sms.service.dubboservice.SmsDeviceService"
+		ref="smsDeviceService" retries="0"/>
+	<bean name="smsDeviceService" class="com.suixingpay.sms.service.dubboservice.impl.SmsDeviceServiceImpl"></bean> 
+	
+	<dubbo:service
+		interface="com.suixingpay.sms.service.dubboservice.dubboMecBusinessLicenceService"
+		ref="dubboMecBusinessLicenceService" retries="0"/>
+	<bean name="dubboMecBusinessLicenceService" class="com.suixingpay.sms.service.dubboservice.impl.dubboMecBusinessLicenceServiceImpl"></bean>
+	
+	<dubbo:service
+		interface="com.suixingpay.sms.service.dubboservice.PayCardService"
+		ref="payCardService" retries="0"/>
+	<bean name="payCardService" class="com.suixingpay.sms.service.dubboservice.impl.PayCardServiceImpl"></bean>   
+	<dubbo:service
+		interface="com.suixingpay.sms.service.dubboservice.RealNameAuthService"
+		ref="realNameAuthService" retries="0"/>
+	<bean name="realNameAuthService" class="com.suixingpay.sms.service.dubboservice.impl.RealNameAuthServiceImpl"></bean>                 
+	
+	
+	
+	<dubbo:service
+		interface="com.suixingpay.sms.service.dubboservice.VvMecIfCheckBService"
+		ref="vvMecIfCheckBService" retries="0"/>
+	<bean name="vvMecIfCheckBService" class="com.suixingpay.sms.service.vvMecIfCheck.impl.VvMecIfCheckServiceImpl"></bean>
+	
+	<dubbo:service
+		interface="com.suixingpay.sms.service.dubboservice.PayCardUnBindService"
+		ref="payCardUnBindService" retries="0"/>
+	<bean name="payCardUnBindService" class="com.suixingpay.sms.service.dubboservice.impl.PayCardUnBindServiceImpl"></bean>
+	
+	<dubbo:service
+		interface="com.suixingpay.sms.service.dubboservice.VVBindLimitService"
+		ref="vvBindLimitService" />
+	<bean name="vvBindLimitService" class="com.suixingpay.sms.service.dubboservice.impl.VVBindLimitServiceImpl"></bean>
+</beans>
