@@ -32,7 +32,7 @@ dependencies {
     compile 'org.mybatis:mybatis:3.2.8'
     compile 'mysql:mysql-connector-java:5.1.34'
     compile 'commons-dbcp:commons-dbcp:1.4'
-    compile("org.apache.tomcat.embed:tomcat-embed-jasper:7.0.59")
+    compile("org.apache.tomcat.embed:tomcat-embed-jasper:8.5.14")
     compile("com.alibaba:druid:1.0.15")
     compile("javax.servlet:jstl:1.2")
     compile("taglibs:standard:1.1.2")
