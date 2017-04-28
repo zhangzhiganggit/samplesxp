@@ -20,7 +20,6 @@ import com.base.domain.Persion;
  * @version: V1.0
  * @review: matieli[zhang_zhg@hisuntech.com]/2017年4月24日 下午4:16:13
  */
-@Service
 public interface PersionService {
     public List<Persion> findPersionList(Persion persion);
 }

@@ -4,13 +4,21 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd"
 	default-autowire="byName">
 	<!-- test1 -->
-	<bean id="test1SqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
-		<property name="dataSource" ref="test1DataSource" />
+	<bean id="suixingpaySqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+		<property name="dataSource" ref="suixingpayDataSource" />
 		<property name="typeAliasesPackage" value="com.base.domain" />
 	</bean>
 	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
-		<property name="sqlSessionFactory" ref="test1SqlSessionFactory"/>
+		<property name="sqlSessionFactory" ref="suixingpaySqlSessionFactory"/>
 		<property name="basePackage" value="com.base.mapper" />
 	</bean>
-	
+	<!-- test2 -->
+    <bean id="hisuntechSqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+        <property name="dataSource" ref="hisuntechDataSource" />
+        <property name="typeAliasesPackage" value="com.base2.domain" />
+    </bean>
+    <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+        <property name="sqlSessionFactory" ref="hisuntechSqlSessionFactory"/>
+        <property name="basePackage" value="com.base2.mapper" />
+    </bean>
 </beans>

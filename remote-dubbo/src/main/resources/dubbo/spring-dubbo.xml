@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://code.alibabatech.com/schema/dubbo
+        http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
+
+    <dubbo:application name="remote-dubbo"/>
+    <dubbo:registry address="#{coreDao['dubbo.registry.address']}" />
+	<dubbo:protocol name="#{coreDao['dubbo.provider.protocol']}"  port="#{coreDao['dubbo.provider.port']}" />
+
+    <dubbo:annotation package="com.zzg"/>
+
+    <!-- admin服务 -->
+	<import resource="spring-dubbo-provider.xml" />
+</beans>

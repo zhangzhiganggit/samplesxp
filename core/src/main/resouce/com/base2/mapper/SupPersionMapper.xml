@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.base2.mapper.SupPersionMapper">
+    <resultMap id="Result" type="com.base2.domain.SupPersion">
+        <result property="fav" column="fav" />
+        <result property="name" column="name" />
+        <result property="sex" column="sex" />
+        <result property="id" column="id" />
+    </resultMap>
+    
+    <select id="findPersionList" parameterType="com.base2.domain.SupPersion" resultMap="Result">
+        select * from Persion 
+        <where>
+            1=1
+            <if test="id!=null and id!='' ">
+                and id = #{id}
+            </if>
+        </where>
+    </select>
+    
+    
+</mapper>

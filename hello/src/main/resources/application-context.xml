@@ -26,6 +26,7 @@
     -->
     <import resource="classpath:zzg/core/dao-datasource.xml" />
     <import resource="classpath:zzg/core/dao-mybatis.xml" />
+    <import resource="dubbo/spring-dubbo.xml"/>
     <!--  
     <bean id="encodingFilter" class="com.suixingpay.sms.util.EncodingFilter">
     </bean>

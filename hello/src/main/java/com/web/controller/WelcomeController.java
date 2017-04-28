@@ -33,8 +33,8 @@ import com.base.mapper.PersionMapper;
  */
 @Controller
 public class WelcomeController {
-    //@Resource 
-//    PersionService persionService;
+    //@Autowired 
+    //PersionService persionService;
     @Autowired
     PersionMapper persionMapper;
     @RequestMapping("/initpage")
@@ -49,5 +49,6 @@ public class WelcomeController {
         mv.addObject("PersionList",plist);
         return mv;
     }
+    
 
 }

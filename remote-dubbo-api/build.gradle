@@ -1,0 +1,45 @@
+apply plugin: 'java'
+apply plugin: 'maven'
+
+repositories {
+    maven{
+        url "http://localhost:8081/nexus/content/groups/public"
+    }
+    mavenLocal()
+    mavenCentral()
+}
+
+// In this section you declare the dependencies for your production and test code
+dependencies {
+    compile 'org.slf4j:slf4j-api:1.7.21'
+    testCompile 'junit:junit:4.12'
+}
+//gradle 1.12写法
+/*
+uploadArchives {
+   repositories {
+      deployer = mavenDeployer {
+        configureAuth = {
+           authentication(userName: 'admin', password: 'admin123')
+        }
+        repository(url: "http://localhost:8081/nexus/content/repositories/releases/", configureAuth)
+        pom.version = '1.0.7'
+        pom.groupId = 'com.zzg'
+        pom.artifactId = 'remote-dubbo-api'
+      }
+   }
+}*/
+//gradle 2.1写法
+uploadArchives {
+    repositories {
+        mavenDeployer {
+            repository(url: "http://localhost:8081/nexus/content/repositories/releases/") {
+                authentication(userName: 'admin', password: 'admin123')
+            }
+            //
+            pom.version = '1.1.1-dev1-zzg'
+            pom.groupId = 'com.zzg'
+            pom.artifactId = 'remote-dubbo-api'
+        }
+    }
+}
