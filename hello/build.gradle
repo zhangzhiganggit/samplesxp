@@ -24,6 +24,6 @@ dependencies {
     // 'test.useTestNG()' to your build script.
     testCompile 'junit:junit:4.12'
     compile project(":core")
-    compile("com.zzg:remote-dubbo-api:1.1.1-dev1-zzg")
+    compile("com.zzg:remote-dubbo-api:1.1.6-dev1-zzg")
     
 }

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<taglib xmlns="http://java.sun.com/xml/ns/j2ee"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-jsptaglibrary_2_0.xsd"
+  version="2.0">
+    
+  <display-name>vbill functions</display-name>
+  <tlib-version>1.0</tlib-version>
+  <short-name>vb</short-name>
+  <uri>http://java.sun.com/jsp/jstl/vb</uri>
+  
+  <function>
+    <description>
+    银行账号四位一空格;add by WJ on 2015-04-10
+    </description>
+    <name>account</name>
+    <function-class>org.gaea.eip.core.biz.oa.utils.VBStringUtils</function-class>
+    <function-signature>java.lang.String account(java.lang.String)</function-signature>
+    <example>
+      Name: ${fn.account(account)}
+    </example>  
+  </function>
+</taglib>

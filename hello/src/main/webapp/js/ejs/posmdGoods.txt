@@ -1,0 +1,86 @@
+<%
+var NOT_EMPTY = "<font color='red'>*</font>";
+%>
+<div id="posmd_container"  class="tab-content" style="display: block;">
+    <div>
+	    <div class="form-group form-group-sm width-300px">
+	            <label class="col-sm-4 control-label widget-color-normal5 width-100px no-padding-left">
+	                <%= '计费方式:' + NOT_EMPTY %>
+	            </label>
+	            <div class="col-sm-8  no-padding">
+	                <div class="width-48 inline has-feedback">
+	                    <select id="selectedPosmdGoods" disabled class="chosen-select form-control">
+	                        <option value="<%= posmdstrAry[4] %>" selected ><%=posmdstrAry[5]%> </option>
+	                    </select>
+	                </div>
+	            </div>
+	        </div>
+    </div>
+	<div id="myPosmdContent"  class="">
+	    <form id="posmdForm<%= posmdstrAry[3]%>" class="cfsForm2">
+	            <div class="cfs_goods" id="tab_posmd"
+	                 goodsId="<%= posmdstrAry[4] %>" goodsName="<%= posmdstrAry[5] %>"
+	                 style="display: block;">
+	                <!--显示pos费率信息-->
+	                <div id="posmd_section" _uuid=" uuid001=" _name="posmdGoodsListId" class="section">
+	                    <fileset>
+	                       <h5 class="header smaller lighter blue" id="sectionName"></h5>
+	                        <div class="form-group form-group-sm  width-300px">
+	                            <label class="col-sm-4 control-label widget-color-normal5 width-100px no-padding-left">
+	                                   <%= '费率(%):' + NOT_EMPTY %>
+	                            </label>
+	                            <div class="col-sm-8  no-padding has-feedback">
+	                                <input id="rate" name="rate" type="text" value="<%= posmdstrAry[0]%>" readonly="readonly" disabled/>
+	                            </div>
+	                       </div>
+	                       </fileset>
+	                </div>
+	                <% if(posmdstrAry[4] == 'GOODS-INF-MD-PACK-BL-B'){ %>
+	                <div id="posmd_section" _uuid=" uuid001=" _name="posmdGoodsListId" class="section">
+	                    <fileset>
+	                    <h5 class="header smaller lighter blue" id="sectionName"></h5>
+	                       <div class="form-group form-group-sm  width-300px">
+	                            <label class="col-sm-4 control-label widget-color-normal5 width-100px no-padding-left">
+	                                   固定金额(元):
+	                            </label>
+	                            <div class="col-sm-8  no-padding has-feedback">
+	                                <input id="fixFee" name="fixFee" type="text" value="<%= posmdstrAry[1]%>" readonly="readonly" disabled/>
+	                            </div>
+	                       </div>
+	                   </fileset>
+	                </div>
+	                <% } %>
+	                <% if(posmdstrAry[4] == 'GOODS-INF-MD-PACK-MON-B'){ %>
+	                <div id="posmd_section" _uuid=" uuid001=" _name="posmdGoodsListId" class="section">
+	                    <fileset>
+	                    <h5 class="header smaller lighter blue" id="sectionName"></h5>
+	                      <div class="form-group form-group-sm  width-300px">
+	                            <label class="col-sm-4 control-label widget-color-normal5 width-100px no-padding-left">
+	                                   月收费金额:
+	                            </label>
+	                            <div class="col-sm-8  no-padding has-feedback">
+	                                <input id="monthFee" name="monthFee" type="text" value="<%= posmdstrAry[2]%>" readonly="readonly" disabled/>
+	                            </div>
+	                      </div>
+	                   </fileset>
+	                </div>
+	                <% } %>
+	                <div id="posmd_section" _uuid=" uuid001=" _name="posmdGoodsListId" class="section">
+	                    <fileset>
+	                    <h5 class="header smaller lighter blue" id="sectionName"></h5>
+	                      <div class="form-group form-group-sm  width-300px">
+	                            <label class="col-sm-4 control-label widget-color-normal5 width-100px no-padding-left">
+	                                   外卡(%):
+	                            </label>
+	                            <div class="col-sm-8  no-padding has-feedback">
+	                                <input id="outCard" name="outCard" type="text" value="<%= posmdstrAry[3]%>" readonly="readonly" disabled/>
+	                            </div>
+	                             </div>
+	                   </fileset>
+	                </div>
+	            </div>
+	        </form>
+        </div>       
+</div>
+<div id="sectionTipDiv"
+     style="position:absolute;display:none;border:1px solid silver;background:#fef7ec;min-height: 100px;min-width: 160px;"></div>

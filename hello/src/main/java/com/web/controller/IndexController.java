@@ -36,7 +36,7 @@ public class IndexController {
     public ModelAndView index(Model model){
          String name=testRegistryService.hello("zz");
          System.out.println("xx=="+name);
-         ModelAndView mv = new ModelAndView("index"); 
+         ModelAndView mv = new ModelAndView("main"); 
          SupPersion p=new SupPersion();
          p.setId("8888");
          List <SupPersion> plist = persionMapper.findPersionList(p);

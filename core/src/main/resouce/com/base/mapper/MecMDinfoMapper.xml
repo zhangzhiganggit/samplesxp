@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.base.mapper.MecMDinfoMapper">
+    <resultMap id="Result" type="com.base.domain.MecMDinfo">
+        <result property="mecNo" column="mecNo" />
+        <result property="mecNm" column="mecNm" />
+        <result property="MDSts" column="MDSts" />
+        <result property="oneMDLimit" column="oneMDLimit" />
+        <result property="dayMDLimit" column="dayMDLimit" />
+        <result property="branchNm" column="branchNm" />
+        <result property="firstOrgNm" column="firstOrgNm" />
+        <result property="orgNm" column="orgNm" />
+        <result property="startTime" column="startTime" />
+        <result property="dtCte" column="dtCte" />
+    </resultMap>
+    
+    <select id="findmecMDinfoList" parameterType="com.base.domain.MecMDinfo" resultMap="Result">
+        select * from MecMDinfo
+        <where>
+            1=1
+            <if test="mecNo!=null and mecNo!='' ">
+                and mecNo = #{mecNo}
+            </if>
+        </where>
+    </select>
+    
+    
+</mapper>

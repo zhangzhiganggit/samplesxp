@@ -37,10 +37,10 @@ public class WelcomeController {
     //PersionService persionService;
     @Autowired
     PersionMapper persionMapper;
-    @RequestMapping("/initpage")
+    @RequestMapping("/")
     @ResponseBody
     public ModelAndView doView() {
-        ModelAndView mv = new ModelAndView("index"); 
+        ModelAndView mv = new ModelAndView("main"); 
         Persion p=new Persion();
         p.setId("1");
         //List <Persion> plist=persionService.findPersionList(p);

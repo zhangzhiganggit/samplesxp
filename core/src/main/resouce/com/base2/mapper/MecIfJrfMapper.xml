@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.base2.mapper.MecIfJrfMapper">
+    <resultMap id="Result" type="com.base2.domain.MecIfJrf">
+        <result property="mno" column="MNO" />
+        <result property="cpr_reg_nm_cn" column="Cpr_reg_nm_cn" />
+        <result property="mec_source" column="Mec_source" />
+        <result property="org_nm" column="Org_nm" />
+        <result property="top_agent_org_no" column="Top_agent_org_no" />
+        <result property="branch_org_no" column="Branch_org_no" />
+        <result property="stl_sts_str" column="Stl_sts_str" />
+        <result property="dt_cte" column="Dt_cte" />
+        <result property="jinjianDt" column="JinjianDt" />
+        <result property="canChangeState" column="CanChangeState" />
+        <result property="remain_amt" column="Remain_amt" />
+        <result property="rat1" column="Rat1" />
+    </resultMap>
+    
+    <select id="findMecIfJrfList" parameterType="com.base2.domain.MecIfJrf" resultMap="Result">
+        select * from MecIfJrf 
+        <where>
+            1=1
+            <if test="mno!=null and mno!='' ">
+                and mno = #{mno}
+            </if>
+        </where>
+    </select>
+    
+    
+</mapper>

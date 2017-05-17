@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<excelTemplateList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+				   xsi:noNamespaceSchemaLocation="../excel_xsd/excel-template.xsd">
+  <excelTemplate>
+	    <excelId>test</excelId>
+	    <excelName>设备批量划拨模板</excelName>
+	    <excelFileName>test.xls</excelFileName>
+	    <excelHead headRowIndex="3">	      
+	      <excelColList excelColIndex="0"  excelColId="s_org_id" excelColName="发出机构编号" excelColWidth="50"  isBlank="false"/>
+	      <excelColList excelColIndex="1"  excelColId="d_org_id" excelColName="收货机构编号" excelColWidth="20" isBlank="false"/>
+	      <excelColList excelColIndex="2"  excelColId="device_name" excelColName="物品名称" excelColWidth="32" isBlank="true"/>
+	      <excelColList excelColIndex="3" excelColId="fact_id" excelColName="厂商编号" excelColWidth="32" isBlank="false"/>
+	      <excelColList excelColIndex="4" excelColId="mod_name" excelColName="型号" excelColWidth="32" isBlank="true"/>
+	      <excelColList excelColIndex="5" excelColId="fact_sn" excelColName="设备序列号" excelColWidth="32" isBlank="false"/>
+        </excelHead>
+  </excelTemplate>
+</excelTemplateList>

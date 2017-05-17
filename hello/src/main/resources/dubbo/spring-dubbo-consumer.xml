@@ -7,4 +7,5 @@
         http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
         
 	<dubbo:reference id="TestRegistryService" interface="com.zzg.api.TestRegistryService" retries="0" check="false" timeout = "12000"/>
+    <dubbo:reference id="MecMDinfoService" interface="com.zzg.api.MecMDinfoService" retries="0" check="false" timeout = "12000"/>
 </beans>

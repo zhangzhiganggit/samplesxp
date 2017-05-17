@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ivy-module version="2.0" xmlns:m="http://ant.apache.org/ivy/maven">
-  <info organisation="" module="remote-dubbo-api" revision="unspecified" status="integration" publication="20170428114333">
+  <info organisation="" module="remote-dubbo-api" revision="unspecified" status="integration" publication="20170502174106">
     <description/>
   </info>
   <configurations>

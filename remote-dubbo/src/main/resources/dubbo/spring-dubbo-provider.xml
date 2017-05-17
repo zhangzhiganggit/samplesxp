@@ -9,4 +9,7 @@
 	<!-- 注册 -->
     <dubbo:service interface="com.zzg.api.TestRegistryService" ref="TestRegistryService" />
     <bean id="TestRegistryService" class="com.zzg.dubbo.TestRegistryServiceImpl" />
+    <!-- 秒到提供者 -->
+    <dubbo:service interface="com.zzg.api.MecMDinfoService" ref="MecMDinfoService" />
+    <bean id="MecMDinfoService" class="com.zzg.dubbo.MecMDinfoServiceImpl" />
 </beans>
