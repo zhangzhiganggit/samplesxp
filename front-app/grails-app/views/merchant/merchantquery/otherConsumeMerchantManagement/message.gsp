@@ -1,0 +1,54 @@
+# ------------------------------------------------------------------------------
+# com.suixingpay.ssp.front.merchant.merchantquery.OtherConsumeMerchantManagement
+# ------------------------------------------------------------------------------
+controller.otherConsumeMerchantManagement.label=VV商户管理
+#controller.otherConsumeMerchantManagement.icon=fa fa-user
+#controller.otherConsumeMerchantManagement.color=
+#controller.otherConsumeMerchantManagement.tooltip=
+otherConsumeMerchantManagement.label=VV商户
+otherConsumeMerchantManagement.id=主键
+otherConsumeMerchantManagement.merchantCode.label=商户编号
+otherConsumeMerchantManagement.belongToOrg.label=归属机构
+otherConsumeMerchantManagement.salesMan.label=业务员
+otherConsumeMerchantManagement.belongToOrgCode.label=归属机构编号
+otherConsumeMerchantManagement.businessClassify.label=行业大类
+otherConsumeMerchantManagement.businessClassify.1001=餐娱类
+otherConsumeMerchantManagement.businessClassify.1002=房产汽车类
+otherConsumeMerchantManagement.businessClassify.2001=民生类
+otherConsumeMerchantManagement.businessClassify.3001=一般类
+otherConsumeMerchantManagement.businessClassify.3002=批发类
+otherConsumeMerchantManagement.businessClassify.4001=公益类
+otherConsumeMerchantManagement.createDate.label=创建日期
+otherConsumeMerchantManagement.directlyOrg.label=直属机构
+otherConsumeMerchantManagement.directlyOrgCode.label=直属机构编号
+otherConsumeMerchantManagement.authenticationStatus.label=认证状态
+otherConsumeMerchantManagement.doBusinessQualificationsAuthenticationStatus.label=营业资质认证状态
+otherConsumeMerchantManagement.doBusinessQualificationsAuthenticationStatus.01=未认证
+otherConsumeMerchantManagement.doBusinessQualificationsAuthenticationStatus.02=已认证
+otherConsumeMerchantManagement.endDate.label=结束时间
+otherConsumeMerchantManagement.generationName.label=一代名称
+otherConsumeMerchantManagement.insideMerchantCode.label=内部商户编号
+otherConsumeMerchantManagement.manageAddress.label=经营地址
+otherConsumeMerchantManagement.managePersonIdCardNo.label=经营人身份证号
+otherConsumeMerchantManagement.managePersonName.label=经营人姓名
+otherConsumeMerchantManagement.merchantRegistName.label=商户注册名称
+otherConsumeMerchantManagement.mobileNo.label=手机号
+otherConsumeMerchantManagement.rate.label=费率(%)
+otherConsumeMerchantManagement.salesManCode.label=业务员编号
+otherConsumeMerchantManagement.startDate.label=开始时间
+otherConsumeMerchantManagement.status.label=状态
+otherConsumeMerchantManagement.status.01=正常
+otherConsumeMerchantManagement.status.02=注销
+otherConsumeMerchantManagement.status.03=冻结
+otherConsumeMerchantManagement.merchantName.label=商户名称
+otherConsumeMerchantManagement.merchantLinkMan.label=商户联系人
+otherConsumeMerchantManagement.merchantStatus.label=商户状态
+otherConsumeMerchantManagement.batchEditTitle.label=将下列商户的销售员修改为：（如果选择的是机构，那么将默认归属为该机构的默认管理员）
+otherConsumeMerchantManagement.updateRate.button.label=修改费率
+otherConsumeMerchantManagement.rate1.label=修改前费率
+otherConsumeMerchantManagement.queryRateLog.button.label=操作记录
+otherConsumeMerchantManagement.newRate1.label=修改后费率
+otherConsumeMerchantManagement.salesMan1.label=操作人
+otherConsumeMerchantManagement.createDate1.label=操作时间
+otherConsumeMerchantManagement.checkAll.label=全选
+

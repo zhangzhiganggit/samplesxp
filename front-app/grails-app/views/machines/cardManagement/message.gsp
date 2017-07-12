@@ -1,0 +1,43 @@
+# ------------------------------------------------------------------------------
+# com.suixingpay.ssp.front.machines.CardManagement
+# ------------------------------------------------------------------------------
+controller.cardManagement.label=IC卡管理
+controller.cardManagement.icon=icon-credit-card
+#controller.cardManagement.color=
+#controller.cardManagement.tooltip=
+cardManagement.label=IC卡管理
+cardManagement.id=主键
+cardManagement.status.label=卡状态
+#cardManagement.status.1=发行
+#cardManagement.status.2=正常
+cardManagement.status.3=已冻结
+cardManagement.status.4=正常
+cardManagement.status.-1=已作废
+cardManagement.permissions.label=下载秘钥权限
+cardManagement.permissions.0=否
+cardManagement.permissions.1=是
+cardManagement.belongtoOrg.label=归属机构
+cardManagement.cardNumber.label=卡号
+cardManagement.effectiveDate.label=生效日期
+cardManagement.expiryDate.label=失效日期
+cardManagement.recipientsDate.label=入库日期
+cardManagement.recipientsPerson.label=领用人
+cardManagement.subordinateOrg.label=划拨目标
+cardManagement.recipients.label=领用
+cardManagement.ICrecipients.label=IC卡领用
+cardManagement.transfer.label=划拨
+cardManagement.ICtransfer.label=IC卡划拨
+cardManagement.giveICtransfer.label=将选中IC卡划拨给：
+cardManagement.recipientsPersonTelphone.label=领用人电话
+cardManagement.checkAll.label=全选
+cardManagement.sure.label=确认
+cardManagement.cancle.label=取消
+cardManagement.org.label=机构
+cardManagement.thisOrgSalesman.label=本机构业务员
+cardManagement.thisOrg.label=本机构
+cardManagement.sureTransfer.label=确认划拨
+cardManagement.belongPerson.label=业务员
+cardManagement.directlyOrg.label=直属机构
+cardManagement.search.label=查询条件
+cardManagement.transfer.show-pop.label=将IC卡数据划拨给业务员时业务员必须实名认证
+cardManagement.transfer.pageGuide.label=选择所划拨数据后点击划拨，可将IC卡数据划拨给其他机构或业务员

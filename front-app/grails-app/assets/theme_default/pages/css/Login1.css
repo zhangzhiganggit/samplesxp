@@ -1,0 +1,87 @@
+/* CSS Document */
+*{ padding:0; margin:0;-webkit-tap-highlight-color: rgba(0, 0, 0, 0);outline: 0;}
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td, ul {margin: 0;padding: 0;text-align: left; }
+body{margin:0 auto;min-width:320px;height:100%;background:#f5f5f9;font-size: 14px;font-family:"宋体";line-height: 1.5;color:#535353;}
+table {border-collapse: collapse;border-spacing: 0;}
+fieldset, img {border: 0;}
+li {list-style: none;}
+input, img {vertical-align: middle;}
+.clearfix {*zoom: 1;}
+
+a:link {text-decoration:none;color:#fff;}
+a:visited {text-decoration:none;color:#fff;}
+a:hover { text-decoration:none;color:#fff;}
+button{border:0px;}
+#body-bg{position:absolute;z-index:-1;width:100%;height:100%;top:0px;left:0px;}
+.login{width:1000px; margin:0px auto;position:relative;}
+.lg-logo{padding-top:20px;width:157px;height:56px;display:block;}
+.lg-outside{width:100%;text-align:center;margin-top:30px;}
+.lg-text{float:left;width:542px;margin-top:52px;}
+.login-model{float:right;width:330px;overflow:auto; border: 1px solid transparent;background: rgba(0,0,0,.5);_background: 0 0;_border: 0;filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=0, StartColorStr='#66000000', EndColorStr='#66000000');padding-bottom:15px;font-family:"宋体";}
+.login-model h1{height:46px;line-height:46px;padding-left:15px;color:#fff;font-weight:normal;font-size:16px;}
+.lg-form-item {padding:0px;margin-top:20px;}
+.form-info{padding:0px 0px 10px 0px;margin:0px auto;width:244px;position:relative;} 
+.form-info label{border-top: 1px solid #a7a7a7;border-bottom: 1px solid #a7a7a7;border-left: 1px solid #a7a7a7;width:40px;height:40px;float:left;}
+.form-input{border: 1px solid #fff;}
+.form-info input{vertical-align:middle;height:40px;line-height:40px;width:180px;padding-left:10px;padding-right:10px;}
+/*.form-tip{height:30px;line-height:30px;padding-left:20px;border:1px solid #f3d995;color:#df9b1e;background:url(../img/auth/den.png) 5px 5px no-repeat #fefcee;font-size:12px;margin:0px auto 10px auto;width:280px;}*/
+.foorm-check{position:absolute;right:10px;top:5px;width:80px;height:25px;}
+.login-xieyi{height:26px;line-height:26px;color:#efefef;font-size:12px;padding-left:30px;width:244px;margin-left:13px;}
+.login-xieyi input{width:16px;height:16px;}
+.form-tip{height:40px;line-height:20px;padding-left:20px;border:1px solid #f3d995;color:#df9b1e;background:url(../img/auth/den.png) 3px 3px no-repeat #fefcee;font-size:12px;margin:0px auto 10px auto;width:280px;background-size:12px 16px;}
+.form-tip1{height:30px;line-height:30px;padding-left:20px;border:1px solid #f3d995;color:#df9b1e;background:url(../img/auth/den.png) 5px 5px no-repeat #fefcee;font-size:12px;margin:0px auto 10px auto;width:280px;}
+.submit-box{margin:10px auto 0px auto;}
+.submit-box .button-ok{width:275px;margin:0px auto;display:block;font-size:14px;text-align:center;height:35px;line-height:35px;color:#fff;border:0px;}
+.submit-box .button-ok{text-decoration:none;color:#fff;background:#00aaee;cursor:pointer;}
+.submit-box .button-ok:visited {text-decoration:none;color:#fff;background:#00aaee;}
+.submit-box .button-ok:hover { text-decoration:none;color:#fff;background:#00a3d2;}
+.login-pub{margin:10px auto 0px auto;width:275px;text-align:left;height:16px;line-height:16px;color:#fff;font-size:12px;}
+.align-right{text-align:right;}
+.text-warning{color:#fd0303;margin-bottom:16px;text-align:center;}
+.form-info-passward{padding:0px 0px 10px 0px;margin:0px auto;width:244px;position:relative;}
+.form-info-passward input{vertical-align:middle;height:36px;line-height:36px;width:220px;padding-left:10px;padding-right:10px;}
+.passward-btn{margin:10px auto 0px auto;text-align:center;height:35px;line-height:35px;color:#fff;text-align:center;}
+.send-passward{background:#f39800;position:absolute;right:0px;top:0px;color:#fff;text-align:center;height:36px;line-height:36px;width:80px;border:0px;text-align:center;cursor:pointer;}
+.send-passward:hover{background:#dd8c07;}
+.margin-right10{margin-right:10px;}
+.submit-box{margin:10px auto 0px auto;}
+.passward-btn .btn-ok{text-decoration:none;color:#fff;background:#00aaee;cursor:pointer;width:275px;margin:0px auto;display:block;font-size:14px;text-align:center;height:35px;line-height:35px;color:#fff;border:0px;display:inline;}
+.passward-btn .btn-ok:visited {text-decoration:none;color:#fff;background:#00aaee;display:inline;}
+.passward-btn .btn-ok:hover { text-decoration:none;color:#fff;background:#00a3d2;display:inline;}
+.passward-btn .btn-reset{text-decoration:none;color:#fff;background:#00aaee;cursor:pointer;width:275px;margin:0px auto;display:block;font-size:14px;text-align:center;height:35px;line-height:35px;color:#fff;border:0px;display:inline;}
+.passward-btn .btn-reset:visited {text-decoration:none;color:#fff;background:#00aaee;display:inline;}
+.passward-btn .btn-reset:hover { text-decoration:none;color:#fff;background:#00a3d2;display:inline;}
+.width-s{width:118px;}
+/*popbox css*/
+#bg_pop{width:100%;height:100%;top:0px;left:0px;position:absolute;filter: Alpha(opacity=50);opacity:0.5; background:#000000; display:none;}
+#popbox_xieyi{ width:65%; height:450px;overflow:auto;background:#e8e8e8;border-radius:5px; font-size:14px;padding:20px;margin-left:17.5%;top:50%; margin-top:-200px; position:fixed; z-index:502;display:none;}
+#popbox_xieyi h1{font-size:16px;height:26px;line-height:26px;text-align:center;}
+#popbox_xieyi p{line-height:23px;}
+#popbox_xieyi a{color:#000;}
+
+@media only screen and (min-width: 800px) and (max-width: 1000px)
+{
+.login{width:890px; margin:0px auto;position:relative;}
+}
+@media only screen and (min-width: 600px) and (max-width: 800px)
+{
+.login{width:800px; margin:0px auto;position:relative;}
+.lg-text{display:none;}
+.lg-outside{margin:30px auto 0px auto;}
+.login-model{float:none;margin:0px auto;}
+}
+@media (max-width:600px)
+{
+body{background:#dddcdc;}
+a:link {text-decoration:none;color:#666;}
+a:visited {text-decoration:none;color:#666;}
+a:hover { text-decoration:none;color:#666;}
+.login{width:330px; margin:0px auto;}
+.lg-outside{margin:30px auto 0px auto;}
+.lg-text{display:none;}
+.login-model{margin:0px auto;width:330px;overflow:auto; border: 1px solid transparent;background:#fff;}
+.form-input{border: 1px solid #d3d3d3;backgrend:#efefef;}
+.login-model h1{color:#000;font-weight:bold;}
+#body-bg{display:none;}
+#popbox_xieyi{ width:250px; height:200px;overflow:auto;background:#e8e8e8;border-radius:5px; font-size:14px;padding:20px;margin-left:-150px;top:50%;left:50%; margin-top:-100px; position:fixed; z-index:502;display:none;}
+}

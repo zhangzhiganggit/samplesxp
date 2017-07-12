@@ -1,0 +1,226 @@
+<%
+var DISABLED = justView ? 'disabled' : '';
+var READONLY = justView ? 'readonly' : '';
+var PRESET = preset ? '1' : '2';
+var PRESET_PREFIX = preset ? '预设' : '';
+var NOT_EMPTY = "<font color='red'>*</font>";
+var maxRate="";
+var minRate="";
+var maxMonthFree="";
+var minMonthFree="";
+var maxUnchangeFree="";
+var minUnchangeFree="";
+var foreignCardValue="";
+//startDate=1472140800000;
+%>
+<div id="cfs_container3" class="tab-content">
+    <div>
+        <div class="form-group form-group-sm width-300px">
+            <label class="col-sm-4 control-label widget-color-normal5 width-100px no-padding-left">
+                <%=  NOT_EMPTY + PRESET_PREFIX + '计费方式' %>:
+            </label>
+            <div class="col-sm-8  nao-padding">
+                <div class="width-48 inline has-feedback">
+                    <select id="selectedGoods3" <%= DISABLED %> class="chosen-select form-control">
+						<option value="">请选择</option>
+                        <% for(var i = 0;i < goodsList.length;i++){
+                            var goods = goodsList[i];
+                            var goodsId = goods.goodsId;
+                            var name = goods.goodsName;
+                        %>
+                        <option value="<%= goodsId %>" <%= ((goodsId == currentGoodsId) ? 'selected' : '') %>><%= name %> </option>
+                        <% } %>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="myTabContent3" class="">
+        <!--遍历商品 显示商品具体信息-->
+        <%
+        for(var goodsIndex = 0;goodsIndex < goodsList.length;goodsIndex++){
+            var goods = goodsList[goodsIndex];
+            var goodsId = goods.goodsId;
+            var goodsName = goods.goodsName;
+            var active = goodsId == currentGoodsId ? 'display: block;' : 'display: none;';
+            var sections = goods.sections;
+        %>
+                <!--遍历商品段落-->
+                <%
+                for(var sectionIndex = 0;sectionIndex < sections.length;sectionIndex++){
+                    var section = sections[sectionIndex];
+                    var rateInfo = section.rateInfo;
+					var pricSectionId = sections[sectionIndex].pricSectionId;
+					//筛选固定收费金额与相关校验  pricSectionId=="PRIC-SECTION-MD-PACK-MON-C-02"
+					if(pricSectionId=="PRIC-SECTION-MD-PACK-MON-B-2-D"){
+		                maxRate=rateInfo.rate[3];
+                        minRate=rateInfo.rate[4];
+                        maxUnchangeFree=rateInfo.fixedFee[3];
+                        minUnchangeFree=rateInfo.fixedFee[4];
+                        console.info('最大费率:'+rateInfo.rate[3]);
+                        console.info('最小费率:'+rateInfo.rate[4]);
+                        console.info('固定最大金额:'+rateInfo.fixedFee[3]);
+                        console.info('固定最小金额:'+rateInfo.fixedFee[4]);
+					}
+
+					//月收费获取金额与相关校验
+					if(pricSectionId=="PRIC-SECTION-MD-PACK-MON-C-02"){
+					     maxMonthFree=rateInfo.fixedFee[3];
+                         minMonthFree=rateInfo.fixedFee[4];
+                         console.info('最大金额:'+rateInfo.fixedFee[3]);
+                         console.info('最小金额:'+rateInfo.fixedFee[4]);
+					}
+					//获取外卡默认值与相关校验
+					if(pricSectionId=="PRIC-SECTION-MD-PACK-MON-B-2-W"){
+					     foreignCardValue=rateInfo.rate[5];
+                    	 console.info('获取外卡:'+rateInfo.rate[5]);
+					}
+					}%>
+			<%}%>
+			<form id="cfsForm3" class="cfsForm3">
+					<div class="cfs_goods" id="tab_3"
+					goodsId="<%= goodsId %>" goodsName="<%= goodsName %>"
+					style="<%= active %>">
+                <div id="cfs_section3" _uuid=" uuid001=" _name="goodsListId" class="section">
+                        <div class="form-group form-group-sm">
+							<!--费率-->
+                            <label class="col-sm-4 control-label widget-color-normal5 width-100px no-padding-left">
+								<font color="red">*</font>费率(%):
+                            </label>
+                            <div class="col-sm-8  no-padding has-feedback">
+								<input id="mDRate" name="mDRate" type="text" regexp="^\d{1,}(\.\d{1,2})?$" check-type="required number" <%= READONLY %>
+								required-message="费率(%)不能为空！" range="<%= minRate%>~<%=maxRate%>"/>
+                            </div>
+                        </div>
+                        <div class="form-group form-group-sm">
+							<!--固定金额-->
+							<label class="col-sm-4 control-label widget-color-normal5 width-100px no-padding-left" id="unchangeLable">
+								<!--<font color="red">*</font>-->固定金额(元):
+                            </label>
+                            <div class="col-sm-8  no-padding has-feedback">
+								<input id="unchangeFree" name="unchangeFree" type="text" regexp="^\d{1,}(\.\d{1,2})?$" regexptip="请输入最多两位小数的数字" <%= READONLY %>
+								 check-type="number" range="<%= minUnchangeFree%>~<%=maxUnchangeFree%>"/>
+                            </div>
+                        </div>
+                        <div class="form-group form-group-sm">
+					        <!--月收费金额-->
+							<label class="col-sm-4 control-label widget-color-normal5 width-100px no-padding-left" id="monthFreeLable">
+								<!--<font color="red">*</font>-->月收费金额:
+							</label>
+							<div class="col-sm-8  no-padding has-feedback">
+								<input id="monthFree" name="monthFree" type="text" regexp="^\d{1,}(\.\d{1,2})?$" regexptip="请输入最多两位小数的数字" <%= READONLY %>
+								check-type="number" range="<%= minMonthFree%>~<%=maxMonthFree%>"/>
+							</div>
+					    </div>
+					    <div class="form-group form-group-sm">
+							<!--外卡-->
+							<label class="col-sm-4 control-label widget-color-normal5 width-100px no-padding-left">
+								<font color="red">*</font>外卡(%):
+							</label>
+							<div class="col-sm-8  no-padding has-feedback">
+								<input id="foreignCard" name="foreignCard" type="text" value=<%=foreignCardValue%> readonly></>
+							</div>
+						</div>
+                </div>
+            </div>
+        </form>
+
+    </div>
+</div>
+<div id="sectionTipDiv3"
+     style="position:absolute;display:none;border:1px solid silver;background:#fef7ec;min-height: 100px;min-width: 160px;"></div>
+<script>
+
+    $(".cfsForm3").$validation();
+    var selectedTab;
+	//选择不同计费方式显示不同字段
+    $("#cfs_container3 #selectedGoods3").change(function () {
+		console.info("---------------");
+        capped = false;
+        cappedValue = null;
+       // currentGoodsId = $(this).val();
+        console.info("-------值--------"+$(this).val());
+		//固定等级
+		if($(this).val()=="GOODS-INF-MD-PACK-BL-B"){
+			$('#cfs_container3 #monthFreeLable').hide();
+			$('#cfs_container3 #monthFree').hide();
+			$('#cfs_container3 #unchangeLable').show();
+			$('#cfs_container3 #unchangeFree').show();
+			cleanEmpty();
+			$('#cfs_container3 .cfs_goods').hide();
+            selectedTab = $('#cfs_container3 #tab_3').show();
+		}
+		//月费等级
+		if($(this).val()=="GOODS-INF-MD-PACK-MON-B"){
+			$('#cfs_container3 #unchangeLable').hide();
+			$('#cfs_container3 #unchangeFree').hide();
+			$('#cfs_container3 #monthFreeLable').show();
+			$('#cfs_container3 #monthFree').show();
+			cleanEmpty();
+            $('#cfs_container3 .cfs_goods').hide();
+            selectedTab = $('#cfs_container3 #tab_3').show();
+		}if($(this).val()!="GOODS-INF-MD-PACK-BL-B"&&$(this).val()!="GOODS-INF-MD-PACK-MON-B"){
+			console.info("-------隐藏页面--------");
+			isHidden();
+		}
+		//change时清空错误校验
+        if($("#valierr").length > 0) {
+            if($("#mDRate").next().html() != ""){
+                $("#mDRate").next().remove();
+            }
+            if($("#unchangeFree").next().html() != ""){
+                $("#unchangeFree").next().remove();
+            }
+            if($("#monthFree").next().html() != ""){
+                $("#monthFree").next().remove();
+            }
+        }
+
+    });
+
+	//清空页面输入值
+	function cleanEmpty(){
+		$('#mDRate').val("");
+		$('#unchangeFree').val("");
+		$('#monthFree').val("");
+	}
+	//当请选择 隐藏表单
+	function isHidden(){
+		$('#cfs_container3 #tab_3').hide();
+	}
+	initPosMdStr();
+    function initPosMdStr(){
+        var posMdStr = $('#posMdStr').val();
+        console.log('posMdStr: '+posMdStr)
+        if (null == posMdStr || "" == posMdStr || posMdStr == undefined) {
+            return;
+        }
+        var posMdStrArray = posMdStr.split(",");
+        if(posMdStrArray.length < 5){
+            return;
+        }
+        //pos秒到费率：0费率，1固定金额(元)，2月收费金额，3外卡,4秒到费率
+        var goodsId = posMdStrArray[4];
+        $('#selectedGoods3').val(goodsId);//计费方式
+        $('#mDRate').val(posMdStrArray[0]);         //费率
+        $('#unchangeFree').val(posMdStrArray[1])     //固定金额
+        $('#monthFree').val(posMdStrArray[2])       //月收费金额
+        $('#foreignCard').val(posMdStrArray[3])     //外卡
+
+        if(goodsId == "GOODS-INF-MD-PACK-BL-B"){
+            $('#cfs_container3 #monthFreeLable').hide();
+            $('#cfs_container3 #monthFree').hide();
+            $('#cfs_container3 #unchangeLable').show();
+            $('#cfs_container3 #unchangeFree').show();
+        }
+        if(goodsId == "GOODS-INF-MD-PACK-MON-B"){
+            $('#cfs_container3 #unchangeLable').hide();
+            $('#cfs_container3 #unchangeFree').hide();
+            $('#cfs_container3 #monthFreeLable').show();
+            $('#cfs_container3 #monthFree').show();
+        }
+        $('#cfs_container3 .cfs_goods').hide();
+        selectedTab = $('#cfs_container3 #tab_3').show();
+
+    }
+</script>

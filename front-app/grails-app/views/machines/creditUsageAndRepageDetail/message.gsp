@@ -1,0 +1,43 @@
+# ------------------------------------------------------------------------------
+# com.suixingpay.ssp.front.machines.CreditUsageAndRepageDetail
+# ------------------------------------------------------------------------------
+controller.creditUsageAndRepageDetail.label=还款及赊购金额信息管理
+#controller.creditUsageAndRepageDetail.icon=
+#controller.creditUsageAndRepageDetail.color=
+#controller.creditUsageAndRepageDetail.tooltip=
+creditUsageAndRepageDetail.label=还款及赊购金额信息
+creditUsageAndRepageDetail.id=主键
+creditUsageAndRepageDetail.createOrderDate.label=订单创建日期
+creditUsageAndRepageDetail.creditAmount.label=赊购额
+creditUsageAndRepageDetail.modeOfPayment.label=支付方式
+creditUsageAndRepageDetail.modeOfRepayment.label=还款方式
+creditUsageAndRepageDetail.numberOfGood.label=物品数量
+creditUsageAndRepageDetail.orderAmountReceivable.label=订单应收金额
+creditUsageAndRepageDetail.orderNumber.label=订单编号
+creditUsageAndRepageDetail.orderRealAmount.label=订单实收金额
+creditUsageAndRepageDetail.orderStatus.label=订单状态
+creditUsageAndRepageDetail.payCompletionDate.label=支付完成日期
+creditUsageAndRepageDetail.repaymentAmount.label=还款金额
+creditUsageAndRepageDetail.repaymentDate.label=还款日期
+creditUsageAndRepageDetail.residualAmount.label=剩余还款额
+creditUsageAndRepageDetail.orderStatus.11=待付款
+creditUsageAndRepageDetail.orderStatus.21=付款待确认
+creditUsageAndRepageDetail.orderStatus.22=已付款
+creditUsageAndRepageDetail.orderStatus.23=付款失败
+creditUsageAndRepageDetail.orderStatus.31=已订货
+creditUsageAndRepageDetail.orderStatus.32=部分订货
+creditUsageAndRepageDetail.orderStatus.41=部分发货
+creditUsageAndRepageDetail.orderStatus.42=全部发货
+creditUsageAndRepageDetail.orderStatus.90=订单完成
+creditUsageAndRepageDetail.isActive.1=订单失效
+creditUsageAndRepageDetail.orderStatus.9=强制完成
+creditUsageAndRepageDetail.orderStatus.61=取消订单
+creditUsageAndRepageDetail.orderStatus.62=失效订单
+creditUsageAndRepageDetail.modeOfPayment.1=在线支付
+creditUsageAndRepageDetail.modeOfPayment.2=汇款
+creditUsageAndRepageDetail.modeOfPayment.3=赊购
+creditUsageAndRepageDetail.modeOfPayment.4=赊购-在线支付
+creditUsageAndRepageDetail.modeOfPayment.5=赊购-汇款
+creditUsageAndRepageDetail.show.label=查看
+creditUsageAndRepageDetail.RepaymentMessage.label=还款信息
+creditUsageAndRepageDetail.RepageDetail.label=使用赊购金额详情

@@ -1,0 +1,44 @@
+# ------------------------------------------------------------------------------
+# com.suixingpay.ssp.front.system.SystemSuggestion
+# ------------------------------------------------------------------------------
+controller.systemSuggestion.label=意见建议
+controller.systemSuggestion.create.label=意见建议
+controller.systemSuggestion.icon=icon-bubble
+#controller.systemSuggestion.color=
+#controller.systemSuggestion.tooltip=
+systemSuggestion.label=意见建议
+systemSuggestion.id=主键
+systemSuggestion.theme.label=主题
+systemSuggestion.feedbackType.label=反馈类型
+systemSuggestion.feedbackType.1=系统问题
+systemSuggestion.feedbackType.2=公告问题
+systemSuggestion.feedbackType.3=优化建议
+systemSuggestion.feedbackType.4=增值产品
+systemSuggestion.feedbackType.5=投诉
+systemSuggestion.problemModule.label=问题模板
+systemSuggestion.announcementTheme.label=公告主题
+systemSuggestion.suggestionType.label=建议类型
+systemSuggestion.valueAddedProducts.label=增值产品
+systemSuggestion.suggestion.label=意见建议
+systemSuggestion.contactPeople.label=联系人
+systemSuggestion.contactTel.label=联系电话
+systemSuggestion.contactEmail.label=联系邮箱
+systemSuggestion.emailRecipient.label=邮件收件人邮箱
+systemSuggestion.emailRecipientName.label=邮件收件人姓名
+systemSuggestion.emailArrivalTime.label=邮件收件人时间
+systemSuggestion.imageAddr.label=图片地址
+systemSuggestion.proposeTime.label=提出时间
+systemSuggestion.proposePeople.label=提出人
+systemSuggestion.isAdministrator.label=是否是管理员
+systemSuggestion.isAdministrator.0=0
+systemSuggestion.isAdministrator.1=1
+systemSuggestion.agentOrgNo.label=归属机构
+systemSuggestion.topAgentOrgNo.label=归属一代编号
+systemSuggestion.branchOrgNo.label=归属分公司编号
+systemSuggestion.branchOrgNm.label=归属分公司名称
+systemSuggestion.operStatus.label=处理状态
+systemSuggestion.operResult.label=处理结果
+systemSuggestion.operNo.label=处理人编号
+systemSuggestion.operNm.label=处理人姓名
+systemSuggestion.operTime.label=时间
+systemSuggestion.remarks.label=备注

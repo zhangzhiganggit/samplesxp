@@ -1,0 +1,39 @@
+# ------------------------------------------------------------------------------
+# com.suixingpay.ssp.front.products.MaintenanceCostOrder
+# ------------------------------------------------------------------------------
+controller.maintenanceCostOrder.label=维护费订单查询
+#controller.maintenanceCostOrder.icon=
+#controller.maintenanceCostOrder.color=
+#controller.maintenanceCostOrder.tooltip=
+maintenanceCostOrder.search.label=查询条件
+maintenanceCostOrder.label=维护费订单查询
+maintenanceCostOrder.id=主键
+maintenanceCostOrder.merchantCode.label=商户编号
+maintenanceCostOrder.receiptsName.label=签购单名称
+maintenanceCostOrder.collectPattern.label=收取模式
+maintenanceCostOrder.collectPattern.02=维护通
+maintenanceCostOrder.collectPattern.08=POS维护费-按日累计扣费
+maintenanceCostOrder.collectPattern.09=POS维护费-按日非累计扣费
+maintenanceCostOrder.orderStatus.label=收取状态
+maintenanceCostOrder.orderStatus.01=未收
+maintenanceCostOrder.orderStatus.02=已收
+maintenanceCostOrder.orderStatus.03=失败
+maintenanceCostOrder.orderStatus.04=撤销
+maintenanceCostOrder.orderStatus.07=失效
+maintenanceCostOrder.belongtoOrgName.label=归属机构
+maintenanceCostOrder.belongtoOrgNo.label=归属机构
+maintenanceCostOrder.createDate.label=生成日期
+maintenanceCostOrder.deductionsDate.label=扣款日期
+maintenanceCostOrder.directlyOrgName.label=直属机构
+maintenanceCostOrder.directlyOrgNo.label=直属机构
+maintenanceCostOrder.paidAmount.label=实收金额
+maintenanceCostOrder.receivableAmount.label=应收金额
+maintenanceCostOrder.salesmanName.label=业务员
+maintenanceCostOrder.salesmanNo.label=业务员
+maintenanceCostOrder.showSum.label=显示汇总
+maintenanceCostOrder.orderNum.label=订单数
+maintenanceCostOrder.amountSum.label=金额汇总
+maintenanceCostOrder.createDate.show-pop.label=根据商户维护费的收取模式，类型为维护通的每月初生成订单，类型为POS维护费的每日生成维护费订单
+maintenanceCostOrder.orderStatus.show-pop.label=商户维护费的订单生成后为  扣款状态时为未扣，扣款日期扣除时变为已收，超过扣款日期未扣时变为失效，总部针对未收订单进行撤销后，订单状态变更为撤销，针对扣款失败的变更为扣款失败 ，可以进行再次扣款
+maintenanceCostOrder.receivableAmount.show-pop.label=维护费订单的应收金额为给商户开通维护费时，填写的收取金额
+maintenanceCostOrder.paidAmount.show-pop.label=商户的维护费订单扣款之后，订单状态为已收，实收金额才会变更为应收取金额

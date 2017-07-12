@@ -1,0 +1,45 @@
+# ------------------------------------------------------------------------------
+# com.suixingpay.ssp.front.products.ImmediatelyArrive
+# ------------------------------------------------------------------------------
+controller.immediatelyArrive.label=即刷即到管理
+#controller.immediatelyArrive.icon=
+#controller.immediatelyArrive.color=
+#controller.immediatelyArrive.tooltip=
+immediatelyArrive.search.label=查询条件
+immediatelyArrive.label=即刷即到
+immediatelyArrive.id=主键
+immediatelyArrive.merchantCode.label=商户编号
+immediatelyArrive.businessName.label=经营名称
+immediatelyArrive.registMobileNo.label=注册手机号
+immediatelyArrive.merchantType.label=商户类型
+immediatelyArrive.merchantType.01=个人手刷
+immediatelyArrive.merchantType.02=mpos
+immediatelyArrive.belongtoOrgName.label=归属机构
+immediatelyArrive.salesmanName.label=业务员
+immediatelyArrive.merchantLevel.label=商户等级
+immediatelyArrive.merchantLevel.1=1级
+immediatelyArrive.merchantLevel.2=2级
+immediatelyArrive.merchantLevel.3=3级
+immediatelyArrive.merchantLevel.4=4级
+immediatelyArrive.merchantLevel.5=5级
+immediatelyArrive.merchantLevel.6=6级
+immediatelyArrive.merchantLevel.7=7级
+immediatelyArrive.merchantLevel.8=8级
+immediatelyArrive.merchantLevel.9=9级
+immediatelyArrive.immediatelyArriveCreateDate.label=开通日期
+immediatelyArrive.immediatelyArriveStatus.label=业务状态
+immediatelyArrive.immediatelyArriveStatus.0=关闭
+immediatelyArrive.immediatelyArriveStatus.1=开通
+immediatelyArrive.directlyOrgName.label=直属机构
+immediatelyArrive.modifyDate.label=关闭日期
+immediatelyArrive.openTime.label=首次开通日期
+immediatelyArrive.operationDate.label=操作日期
+immediatelyArrive.operationTime.label=操作时间
+immediatelyArrive.operator.label=操作人
+immediatelyArrive.operationAction.label=操作动作
+immediatelyArrive.operationAction.00=关闭
+immediatelyArrive.operationAction.01=开通
+immediatelyArrive.remark.label=备注
+default.button.record.label=操作记录
+immediatelyArrive.close.label=关闭
+immediatelyArrive.open.label=开通

@@ -1,8 +1,0 @@
-connection.arguments=
-connection.gradle.distribution=GRADLE_DISTRIBUTION(LOCAL_INSTALLATION(/Users/zhangzhigang/Documents/Work/suixingpay/suixingpayAPP/gradle-1.12))
-connection.java.home=/Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home
-connection.jvm.arguments=
-connection.project.dir=../remote-dubbo
-derived.resources=.gradle,build
-eclipse.preferences.version=1
-project.path=\:core

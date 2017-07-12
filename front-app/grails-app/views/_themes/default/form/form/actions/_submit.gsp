@@ -1,0 +1,1 @@
+<button${ id ? raw(' id="'+id+'"') : ''} class="${btnCssClass}" type="submit"><g:if test="${btnIconClass}"><i class="${btnIconClass}"></i>&nbsp;</g:if>${value}</button>
